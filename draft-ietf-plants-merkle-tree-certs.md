@@ -1418,6 +1418,12 @@ Some organizations have published statistics which can be used to estimate this 
 * {{CloudflareRadar}} reported around 2,100,000,000 unexpired certificates in CT logs, across all CAs
 * {{CloudflareRadar}} reported an issuance rate of around 444,000 certificates per hour, across all CAs
 
+And as of September 17th, 2026:
+
+* {{LetsEncrypt}} reported 682,000,000 active certificates for a single CA
+* {{CloudflareRadar}} reported around 9,500,000,000 unexpired certificates in CT logs, across all CAs
+* {{CloudflareRadar}} reported an issuance rate of around 591,000 certificates per hour, across all CAs
+
 The current issuance rate across the Web PKI may not necessarily be representative of the Web PKI after a transition to short-lived certificates. Assuming a certificate lifetime of 7 days, and that subscribers will update their certificates 75% of the way through their lifetime (see {{certificate-renewal}}), every certificate will be reissued every 126 hours. This gives issuance rate estimates of around 4,400,000 certificates per hour and 17,000,000 certificates per hour, for the first two values above. Note the larger estimate is across all CAs, while subtrees would only span one CA.
 
 Using the per-CA short lifetime estimate, if the CA mints a checkpoint every 2 seconds, standalone certificate subtrees will span around 2,500 certificates, leading to 12 hashes in the inclusion proof, or 384 bytes. Standalone certificates additionally must carry a sufficient set of signatures to meet relying party requirements.
